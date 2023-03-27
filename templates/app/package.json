@@ -1,0 +1,18 @@
+{
+  "name": "${name}",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pnpm run start:local",
+    "start:local": "cross-env PROJECT_ENV=local UMI_ENV=development max dev",
+    "start:dev": "cross-env PROJECT_ENV=dev UMI_ENV=development max dev",
+    "start:qa": "cross-env PROJECT_ENV=qa UMI_ENV=development max dev",
+    "start:stg": "cross-env PROJECT_ENV=stg UMI_ENV=development max dev",
+    "start:prd": "cross-env PROJECT_ENV=prd UMI_ENV=development max dev",
+    "build:dev": "cross-env PROJECT_ENV=dev UMI_ENV=production max build",
+    "build:qa": "cross-env PROJECT_ENV=qa UMI_ENV=production max build",
+    "build:stg": "cross-env PROJECT_ENV=stg UMI_ENV=production max build",
+    "build:prd": "cross-env PROJECT_ENV=prd UMI_ENV=production max build",
+    "postinstall": "rimraf node_modules/.cache && max setup"
+  }
+}

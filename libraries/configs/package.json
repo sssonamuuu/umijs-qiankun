@@ -1,0 +1,14 @@
+{
+  "name": "@lw/configs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "files": [
+    "src/*"
+  ],
+  "scripts": {
+    "postinstall": "rimraf node_modules/.cache && max setup"
+  },
+  "author": "",
+  "license": "ISC"
+}
