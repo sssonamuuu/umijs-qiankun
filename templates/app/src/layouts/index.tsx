@@ -1,7 +1,6 @@
 import { LwPlaceholder } from '@lw/components';
 import { Consts } from '@lw/consts';
 import { useGlobalState } from '@lw/hooks';
-import { insertCssVariable } from '@lw/themes';
 import { ErrorUtils } from '@lw/utils';
 import { Outlet } from '@umijs/max';
 import { ConfigProvider } from 'hammer';
@@ -12,10 +11,7 @@ export default function () {
 
   /** 子项目单独运行，需要初始化 */
   useEffect(() => {
-    if (initState === void 0) {
-      init();
-      insertCssVariable(theme.token);
-    }
+    initState === void 0 && init();
   }, [initState]);
 
   return (

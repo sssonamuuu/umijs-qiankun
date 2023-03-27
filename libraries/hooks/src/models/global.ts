@@ -32,6 +32,7 @@ export default function () {
       console.log(options);
       setInitState(ErrorUtils.loading);
       try {
+        insertCssVariable(theme.token);
         await Promise.resolve();
         setInitState(null);
       } catch (e) {
