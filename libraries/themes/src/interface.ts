@@ -184,9 +184,6 @@ export interface CustomThemeTypes {
   'colorFillQuaternary': string;
   'colorBgLayout': string;
   'colorBgContainer': string;
-  colorBgContainerSecondary: string;
-  /** 表头颜色，antd不生效 */
-  colorBgTableHeader: string;
   'colorBgElevated': string;
   'colorBgSpotlight': string;
   'colorBorder': string;
@@ -261,7 +258,6 @@ export interface CustomThemeTypes {
   'borderRadiusSM': number;
   'borderRadiusLG': number;
   'borderRadiusOuter': number;
-  homeContentWidth: number;
 }
 
 export type ThemeTypeKey = 'default' | 'dark';
