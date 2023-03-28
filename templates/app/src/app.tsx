@@ -9,7 +9,7 @@ export default defineApp({
   rootContainer (continer) {
     return (
       <StyleProvider hashPriority="high">
-        <HttpClientContext value={HttpUtils.instance.default}>
+        <HttpClientContext value={HttpUtils.instance}>
           {continer}
         </HttpClientContext>
       </StyleProvider>
