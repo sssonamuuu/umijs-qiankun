@@ -37,10 +37,6 @@ export default defineConfig({
     exportLocalsConvention: 'camelCase',
   },
   title: '加载中...',
-  locale: {
-    baseSeparator: '-',
-    title: true,
-  },
   // 不识别 components 和 hooks 目录下的文件 和 ts文件 为路由
   conventionRoutes: { exclude: [/\/components?\//, /\/hooks?\//, /.ts$/]},
   define: { 'process.env.PROJECT_ENV': process.env.PROJECT_ENV },
@@ -56,5 +52,5 @@ export default defineConfig({
   model: {},
   base: '/',
   qiankun: { slave: {} },
-  // forkTSChecker: {},
+  forkTSChecker: {},
 });

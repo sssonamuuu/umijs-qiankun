@@ -1,10 +1,12 @@
 import { UnclassifiedUtils } from '../UnclassifiedUtils';
 
 export class ArrayUtils {
+  /** 数组或则单个值转数组 */
   static singleOrArrayToArray <T> (value?: T | T[]): T[] {
     return UnclassifiedUtils.isNullOrUndefined(value) ? [] : Array.isArray(value) ? value : [value!];
   }
 
+  /** 获取数组第一个值或则单个值 */
   static getSingleOrArrayFirst <T> (value?: T | T[]): T | undefined {
     return Array.isArray(value) ? value[0] : value;
   }

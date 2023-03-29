@@ -2,7 +2,6 @@ import '@yzw/net/src/axios-extension.d';
 
 import configs from '@lw/configs';
 import { Consts } from '@lw/consts';
-import { getLocale } from '@umijs/max';
 import type { ResponseData } from '@yzw/net';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { message } from 'hammer';
@@ -16,7 +15,6 @@ const defaultInstance = axios.create({
 });
 
 function reqSuccess (config: AxiosRequestConfig) {
-  config.headers = { ...config.headers, 'LW-Languate': getLocale() };
   config.data ??= {};
   return config;
 }
@@ -26,13 +24,10 @@ function reqError (error: Error) {
 }
 
 function resSuccess (res: AxiosResponse<ResponseData<unknown>>) {
-  const {
-    data,
-    config: { showWarn = true, originalResp = false },
-  } = res;
+  const { data, config: { showWarn = true, originalResp = false } } = res;
 
   if (originalResp) {
-    return data;
+    return res;
   }
 
   if (!data.success) {
@@ -42,7 +37,7 @@ function resSuccess (res: AxiosResponse<ResponseData<unknown>>) {
 
     if (data.code === Consts.Enums.HTTP_OR_ERROR_CODE.UNLOGIN) {
       message.error('登录已失效，正在跳转登录页面');
-      location.href = configs.loginUrl;
+      location.href = configs.contractorUrl;
     }
 
     throw new ErrorUtils(data.code, data.message);

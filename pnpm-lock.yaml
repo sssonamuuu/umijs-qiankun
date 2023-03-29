@@ -34,7 +34,7 @@ importers:
       dayjs: 1.11.7
       eslint: 8.18.0
       eslint-plugin-simple-import-sort: 8.0.0
-      front-end-cache: 1.0.1
+      front-end-cache: 1.0.2
       hammer: 0.0.8
       husky: 8.0.1
       lint-staged: 13.0.2
@@ -70,7 +70,7 @@ importers:
       classnames: 2.3.1
       cross-env: 7.0.3
       dayjs: 1.11.7
-      front-end-cache: 1.0.1
+      front-end-cache: 1.0.2
       hammer: 0.0.8_react-dom@18.1.0+react@18.1.0
       lodash: 4.17.21
       normalize-css-color: 1.0.2
@@ -8298,8 +8298,8 @@ packages:
   /fraction.js/4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
 
-  /front-end-cache/1.0.1:
-    resolution: {integrity: sha1-dJJjPKzSpbw3nZ6iJot0dD+/yQ4=}
+  /front-end-cache/1.0.2:
+    resolution: {integrity: sha512-zmob1V70Q7h4DrTWFt07pLbql4uqiE1e8glSsb2ExXPIJI77iiLz6ubz+E2fYwLUy6lua+Xl4D64I7zNnURs+w==}
     dependencies:
       core-js: 3.22.4
     dev: false
